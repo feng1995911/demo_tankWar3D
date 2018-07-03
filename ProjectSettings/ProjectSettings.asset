@@ -158,11 +158,11 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.jiangyin.starforce
+    Android: com.jiangyin.GameMain
     Standalone: unity.Jiang Yin.Star Force
-    Tizen: com.jiangyin.starforce
-    iOS: com.jiangyin.starforce
-    tvOS: com.jiangyin.starforce
+    Tizen: com.jiangyin.GameMain
+    iOS: com.jiangyin.GameMain
+    tvOS: com.jiangyin.GameMain
   buildNumber:
     iOS: 0
   AndroidBundleVersionCode: 1

@@ -3,11 +3,11 @@ using GameFramework.DataTable;
 using GameFramework.Sound;
 using UnityGameFramework.Runtime;
 
-namespace StarForce
+namespace GameMain
 {
     public static class SoundExtension
     {
-        private const float FadeVolumeDuration = 1f;
+        private const float DefaultFadeVolumeDuration = 1f;
         private static int? s_MusicSerialId = null;
 
         public static int? PlayMusic(this SoundComponent soundComponent, int musicId, object userData = null)
@@ -18,20 +18,21 @@ namespace StarForce
             DRMusic drMusic = dtMusic.GetDataRow(musicId);
             if (drMusic == null)
             {
-                Log.Warning("Can not load music '{0}' from data table.", musicId.ToString());
+                Log.Warning("Can no load Music '{0}' from data table.", musicId.ToString());
                 return null;
             }
 
             PlaySoundParams playSoundParams = new PlaySoundParams
             {
-                Priority = 64,
-                Loop = true,
-                VolumeInSoundGroup = 1f,
-                FadeInSeconds = FadeVolumeDuration,
+                Priority = drMusic.Priority,
+                Loop = drMusic.Loop,
+                VolumeInSoundGroup = drMusic.Volume,
+                FadeInSeconds = drMusic.FadeTime,
                 SpatialBlend = 0f,
             };
 
-            s_MusicSerialId = soundComponent.PlaySound(AssetUtility.GetMusicAsset(drMusic.AssetName), "Music", playSoundParams, null, userData);
+            s_MusicSerialId = soundComponent.PlaySound(AssetUtility.GetMusicAsset(drMusic.AssetName), "Music",
+                playSoundParams, null, userData);
             return s_MusicSerialId;
         }
 
@@ -42,11 +43,11 @@ namespace StarForce
                 return;
             }
 
-            soundComponent.StopSound(s_MusicSerialId.Value, FadeVolumeDuration);
+            soundComponent.StopSound(s_MusicSerialId.Value, DefaultFadeVolumeDuration);
             s_MusicSerialId = null;
         }
 
-        public static int? PlaySound(this SoundComponent soundComponent, int soundId, Entity bindingEntity = null, object userData = null)
+        public static int? PlaySound(this SoundComponent soundComponent, int soundId, EntityBase bindingEntity = null, object userData = null)
         {
             IDataTable<DRSound> dtSound = GameEntry.DataTable.GetDataTable<DRSound>();
             DRSound drSound = dtSound.GetDataRow(soundId);
@@ -65,27 +66,6 @@ namespace StarForce
             };
 
             return soundComponent.PlaySound(AssetUtility.GetSoundAsset(drSound.AssetName), "Sound", playSoundParams, bindingEntity != null ? bindingEntity.Entity : null, userData);
-        }
-
-        public static int? PlayUISound(this SoundComponent soundComponent, int uiSoundId, object userData = null)
-        {
-            IDataTable<DRUISound> dtUISound = GameEntry.DataTable.GetDataTable<DRUISound>();
-            DRUISound drUISound = dtUISound.GetDataRow(uiSoundId);
-            if (drUISound == null)
-            {
-                Log.Warning("Can not load UI sound '{0}' from data table.", uiSoundId.ToString());
-                return null;
-            }
-
-            PlaySoundParams playSoundParams = new PlaySoundParams
-            {
-                Priority = drUISound.Priority,
-                Loop = false,
-                VolumeInSoundGroup = drUISound.Volume,
-                SpatialBlend = 0f,
-            };
-
-            return soundComponent.PlaySound(AssetUtility.GetUISoundAsset(drUISound.AssetName), "UISound", playSoundParams, userData);
         }
 
         public static bool IsMuted(this SoundComponent soundComponent, string soundGroupName)
@@ -165,5 +145,6 @@ namespace StarForce
             GameEntry.Setting.SetFloat(string.Format(Constant.Setting.SoundGroupVolume, soundGroupName), volume);
             GameEntry.Setting.Save();
         }
+
     }
 }

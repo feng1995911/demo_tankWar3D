@@ -1,16 +1,23 @@
-﻿using UnityEngine;
+﻿using FairyGUI;
+using UnityEngine;
 
-namespace StarForce
+namespace GameMain
 {
     /// <summary>
     /// 游戏入口。
     /// </summary>
     public partial class GameEntry : MonoBehaviour
     {
+
         private void Start()
         {
             InitBuiltinComponents();
             InitCustomComponents();
+        }
+
+        private void OnDestroy()
+        {
+            ClearCustomComponents();
         }
     }
 }

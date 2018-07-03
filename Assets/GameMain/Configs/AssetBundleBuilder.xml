@@ -17,7 +17,7 @@
       <IgnoreTypeTreeChangesSelected>False</IgnoreTypeTreeChangesSelected>
       <AppendHashToAssetBundleNameSelected>False</AppendHashToAssetBundleNameSelected>
       <ChunkBasedCompressionSelected>True</ChunkBasedCompressionSelected>
-      <BuildEventHandlerTypeName>StarForce.Editor.StarForceBuildEventHandler</BuildEventHandlerTypeName>
+      <BuildEventHandlerTypeName>GameMain.Editor.GameMainBuildEventHandler</BuildEventHandlerTypeName>
       <OutputDirectory></OutputDirectory>
     </Settings>
   </AssetBundleBuilder>

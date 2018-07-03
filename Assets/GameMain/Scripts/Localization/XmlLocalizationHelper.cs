@@ -1,21 +1,15 @@
-﻿using GameFramework;
-using System;
+﻿using System;
 using System.Xml;
+using GameFramework;
 using UnityGameFramework.Runtime;
 
-namespace StarForce
+namespace GameMain
 {
     /// <summary>
     /// XML 格式的本地化辅助器。
     /// </summary>
     public class XmlLocalizationHelper : DefaultLocalizationHelper
     {
-        /// <summary>
-        /// 解析字典。
-        /// </summary>
-        /// <param name="text">要解析的字典文本。</param>
-        /// <param name="userData">用户自定义数据。</param>
-        /// <returns>是否解析字典成功。</returns>
         public override bool ParseDictionary(string text, object userData)
         {
             try
@@ -66,6 +60,7 @@ namespace StarForce
                 Log.Warning("Can not parse dictionary '{0}' with exception '{1}'.", text, string.Format("{0}\n{1}", exception.Message, exception.StackTrace));
                 return false;
             }
+
         }
     }
 }

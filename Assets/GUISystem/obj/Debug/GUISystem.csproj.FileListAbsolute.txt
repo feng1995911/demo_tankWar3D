@@ -1,0 +1,9 @@
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\bin\Debug\GUISystem.dll
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\bin\Debug\GUISystem.pdb
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\bin\Debug\DOTween.dll
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\bin\Debug\UnityEngine.dll
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\obj\Debug\GUISystem.csprojAssemblyReference.cache
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\obj\Debug\GUISystem.csproj.CoreCompileInputs.cache
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\obj\Debug\GUISystem.csproj.CopyComplete
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\obj\Debug\GUISystem.dll
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GUISystem\obj\Debug\GUISystem.pdb

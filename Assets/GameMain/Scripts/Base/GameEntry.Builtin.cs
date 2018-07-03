@@ -1,6 +1,6 @@
 ﻿using UnityGameFramework.Runtime;
 
-namespace StarForce
+namespace GameMain
 {
     /// <summary>
     /// 游戏入口。
@@ -16,9 +16,6 @@ namespace StarForce
             private set;
         }
 
-        /// <summary>
-        /// 获取配置组件。
-        /// </summary>
         public static ConfigComponent Config
         {
             get;
@@ -133,6 +130,15 @@ namespace StarForce
             private set;
         }
 
+       /// <summary>
+       /// 引用池组件
+       /// </summary>
+        public static ReferencePoolComponent Reference
+        {
+            get;
+            private set;
+        }
+
         /// <summary>
         /// 获取场景组件。
         /// </summary>
@@ -194,6 +200,7 @@ namespace StarForce
             ObjectPool = UnityGameFramework.Runtime.GameEntry.GetComponent<ObjectPoolComponent>();
             Procedure = UnityGameFramework.Runtime.GameEntry.GetComponent<ProcedureComponent>();
             Resource = UnityGameFramework.Runtime.GameEntry.GetComponent<ResourceComponent>();
+            Reference = UnityGameFramework.Runtime.GameEntry.GetComponent<ReferencePoolComponent>();
             Scene = UnityGameFramework.Runtime.GameEntry.GetComponent<SceneComponent>();
             Setting = UnityGameFramework.Runtime.GameEntry.GetComponent<SettingComponent>();
             Sound = UnityGameFramework.Runtime.GameEntry.GetComponent<SoundComponent>();

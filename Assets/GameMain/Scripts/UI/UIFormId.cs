@@ -1,4 +1,4 @@
-﻿namespace StarForce
+﻿namespace GameMain
 {
     /// <summary>
     /// 界面编号。

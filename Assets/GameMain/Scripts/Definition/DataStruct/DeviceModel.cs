@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace StarForce
+namespace GameMain
 {
     [Serializable]
     public class DeviceModel

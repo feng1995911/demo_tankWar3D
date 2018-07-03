@@ -1,7 +1,11 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+
+using System;
+using UnityEditor;
+
 using UnityEngine;
 
-namespace StarForce.Editor
+namespace GameMain.Editor
 {
     [CustomEditor(typeof(DeviceModelConfig))]
     public class DeviceModelConfigInspector : UnityEditor.Editor
@@ -15,3 +19,5 @@ namespace StarForce.Editor
         }
     }
 }
+
+#endif

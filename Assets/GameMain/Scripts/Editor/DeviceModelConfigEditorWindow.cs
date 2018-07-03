@@ -1,15 +1,17 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+
+using System;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace StarForce.Editor
+namespace GameMain.Editor
 {
     public class DeviceModelConfigEditorWindow : EditorWindow
     {
         private DeviceModelConfig m_Config = null;
 
-        [MenuItem("Star Force/Device Model Config Editor")]
+        [MenuItem("MMORPG Demo/Device Model Config Editor")]
         public static void EditDeviceModelConfig()
         {
             const string DeviceModelConfigFullName = "Assets/GameMain/Configs/DeviceModelConfig.asset";
@@ -121,3 +123,5 @@ namespace StarForce.Editor
         }
     }
 }
+
+#endif

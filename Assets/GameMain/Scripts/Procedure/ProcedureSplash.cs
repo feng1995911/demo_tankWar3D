@@ -1,6 +1,6 @@
 ﻿using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace StarForce
+namespace GameMain
 {
     public class ProcedureSplash : ProcedureBase
     {

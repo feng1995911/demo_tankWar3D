@@ -1,7 +1,7 @@
 ﻿using GameFramework.Network;
 using ProtoBuf;
 
-namespace StarForce
+namespace GameMain
 {
     public abstract class PacketBase : Packet, IExtensible
     {

@@ -1,7 +1,7 @@
 ﻿using GameFramework;
 using GameFramework.Network;
 
-namespace StarForce
+namespace GameMain
 {
     public abstract class PacketHeaderBase : IPacketHeader, IReference
     {

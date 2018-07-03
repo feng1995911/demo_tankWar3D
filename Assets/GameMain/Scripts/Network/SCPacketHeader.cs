@@ -1,4 +1,4 @@
-﻿namespace StarForce
+﻿namespace GameMain
 {
     public sealed class SCPacketHeader : PacketHeaderBase
     {

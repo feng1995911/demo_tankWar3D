@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StarForce
+namespace GameMain
 {
     public static class WebUtility
     {

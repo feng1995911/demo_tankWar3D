@@ -1,7 +1,7 @@
 ﻿using ProtoBuf;
 using System;
 
-namespace StarForce
+namespace GameMain
 {
     [Serializable, ProtoContract(Name = @"CSHeartBeat")]
     public partial class CSHeartBeat : CSPacketBase

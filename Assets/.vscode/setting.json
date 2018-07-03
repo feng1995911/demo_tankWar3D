@@ -1,0 +1,15 @@
+{  
+    "search.exclude": {  
+        "**/node_modules": true,  
+        "**/bower_components": true  
+    },  
+  
+    "files.exclude": {  
+        "**/.git": true,  
+        "**/.svn": true,  
+        "**/.DS_Store": true,  
+        "**/node_modules": true,  
+        "**/iOS": true,  
+        "**/*.meta":true
+    }  
+}  
