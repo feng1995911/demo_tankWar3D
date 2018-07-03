@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExcelConfigExport>
+  <ConfigItem ExcelFile="../Excel/Buff属性配置表.xlsx" SheetName="Data_BuffAttr">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/BuffAttr.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRBuffAttr" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRBuffAttr.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/UI界面配置表.xlsx" SheetName="UI界面配置表">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/UIForm.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRUIForm" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRUIForm.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/背景音乐配置表.xlsx" SheetName="背景音乐配置表">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/Music.txt</Client>
+      <Server />
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRMusic" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRMusic.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath />
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/场景配置表.xlsx" SheetName="场景配置">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/Scene.txt</Client>
+      <Server />
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRScene" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRScene.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/关卡配置表.xlsx" SheetName="Data_Copy">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/Level.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRLevel" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRLevel.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色Buff配置表.xlsx" SheetName="Data_Buff">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/Buff.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRBuff" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRBuff.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色等级配置表.xlsx" SheetName="Data_HeroLevel">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/HeroLevel.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRHeroLevel" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRHeroLevel.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色等级配置表.xlsx" SheetName="default">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/HeroLevel.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRHeroLevel" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRHeroLevel.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色取名配置表.xlsx" SheetName="角色取名配置表">
+    <ConfigInfo>
+      <Client>../DataTableOutput/RoleName.txt</Client>
+      <Server />
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRRoleName" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRRoleName.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath />
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色实体配置表.xlsx" SheetName="Data_Entiny">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/ActorEntity.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRActorEntity" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRActorEntity.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色实体配置表.xlsx" SheetName="default">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/ActorEntity.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRActorEntity" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRActorEntity.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/角色实体配置表.xlsx" SheetName="角色配置表">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/ActorEntity.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRActorEntity" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRActorEntity.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath>../../Server/Servers/GameLogic/GameConfig/</FilePath>
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/实体配置表.xlsx" SheetName="实体配置表">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/Entity.txt</Client>
+      <Server />
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DREntity" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DREntity.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath />
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/武器配置表.xlsx" SheetName="武器配置表">
+    <ConfigInfo>
+      <Client>../DataTableOutput/Weapon.txt</Client>
+      <Server>../../ServerRun/LogicSettings/</Server>
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRWeapon" Manager="None">
+        <FilePath>../CodeOutput/DRWeapon.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath />
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/音效配置表.xlsx" SheetName="音效配置表">
+    <ConfigInfo>
+      <Client>../../Assets/GameMain/DataTables/Sound.txt</Client>
+      <Server />
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRSound" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRSound.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath />
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+  <ConfigItem ExcelFile="../Excel/职业创建配置表.xlsx" SheetName="职业创建配置表">
+    <ConfigInfo>
+      <Client>../DataTableOutput/PoseRole.txt</Client>
+      <Server />
+    </ConfigInfo>
+    <SourceInfo>
+      <CS ClassName="DRPoseRole" Manager="None">
+        <FilePath>../../../Code/GameMain/DataTable/DRPoseRole.cs</FilePath>
+      </CS>
+      <CPP ClassName="" Manager="None" Capacity="1024" StepSize="512" KeyCount="64" GroupSize="64">
+        <FilePath />
+      </CPP>
+    </SourceInfo>
+  </ConfigItem>
+</ExcelConfigExport>
