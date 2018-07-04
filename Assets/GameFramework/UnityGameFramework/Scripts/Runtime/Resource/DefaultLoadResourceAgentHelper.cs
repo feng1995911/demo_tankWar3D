@@ -8,6 +8,7 @@
 using GameFramework;
 using GameFramework.Resource;
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -143,6 +144,18 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
+        ///  通过加载资源代理辅助器开始同步读取资源文件。
+        /// </summary>
+        /// <param name="fullPath"></param>
+        /// <returns></returns>
+        public override object ReadFileSync(string fullPath)
+        {
+            m_FileFullPath = fullPath;
+
+            return AssetBundle.LoadFromFile(fullPath);
+        }
+
+        /// <summary>
         /// 通过加载资源代理辅助器开始异步读取资源二进制流。
         /// </summary>
         /// <param name="fullPath">要加载资源的完整路径名。</param>
@@ -161,6 +174,25 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
+        /// 通过加载资源代理辅助器开始同步读取资源二进制流。
+        /// </summary>
+        /// <param name="fullPath">要加载资源的完整路径名。</param>
+        /// <param name="loadType">资源加载方式。</param>
+        public override byte[] ReadBytesSync(string fullPath, int loadType)
+        {
+            FileStream fs = new FileStream(fullPath, FileMode.Open, FileAccess.Read);
+            byte[] buffur = new byte[fs.Length];
+
+            fs.Read(buffur, 0, buffur.Length);
+            fs.Close();
+
+            m_BytesFullPath = fullPath;
+            m_LoadType = loadType;
+
+            return buffur;
+        }
+
+        /// <summary>
         /// 通过加载资源代理辅助器开始异步将资源二进制流转换为加载对象。
         /// </summary>
         /// <param name="bytes">要加载资源的二进制流。</param>
@@ -173,6 +205,15 @@ namespace UnityGameFramework.Runtime
             }
 
             m_BytesAssetBundleCreateRequest = AssetBundle.LoadFromMemoryAsync(bytes);
+        }
+
+        /// <summary>
+        /// 通过加载资源代理辅助器开始异步将资源二进制流转换为加载对象。
+        /// </summary>
+        /// <param name="bytes">要加载资源的二进制流。</param>
+        public override object ParseBytesSync(byte[] bytes)
+        {
+            return AssetBundle.LoadFromMemory(bytes);
         }
 
         /// <summary>
@@ -213,6 +254,31 @@ namespace UnityGameFramework.Runtime
             {
                 m_AssetBundleRequest = assetBundle.LoadAssetAsync(resourceChildName);
             }
+        }
+
+        /// <summary>
+        /// 通过加载资源代理辅助器开始同步加载资源。
+        /// </summary>
+        /// <param name="resource">资源</param>
+        /// <param name="resourceChildName">要加载的子资源名</param>
+        /// <returns></returns>
+        public override object LoadAssetSync(object resource, string resourceChildName)
+        {
+            AssetBundle assetBundle = resource as AssetBundle;
+            if (assetBundle == null)
+            {
+                m_LoadResourceAgentHelperErrorEventHandler(this, new LoadResourceAgentHelperErrorEventArgs(LoadResourceStatus.TypeError, "Can not load asset bundle from loaded resource which is not an asset bundle."));
+                return null;
+            }
+
+            if (string.IsNullOrEmpty(resourceChildName))
+            {
+                m_LoadResourceAgentHelperErrorEventHandler(this, new LoadResourceAgentHelperErrorEventArgs(LoadResourceStatus.ChildAssetError, "Can not load asset from asset bundle which child name is invalid."));
+                return null;
+            }
+
+            m_ResourceChildName = resourceChildName;
+            return assetBundle.LoadAsset(resourceChildName);
         }
 
         /// <summary>

@@ -1,0 +1,2 @@
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GameMain\obj\Debug\GameMain.csprojAssemblyReference.cache
+G:\unity\unityObject\demo_mmorpg\MMORPGDemo\Code\GameMain\obj\Debug\GameMain.csproj.CoreCompileInputs.cache

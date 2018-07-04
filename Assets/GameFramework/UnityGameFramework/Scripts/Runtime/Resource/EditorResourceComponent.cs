@@ -686,6 +686,33 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
+        /// 同步加载资源
+        /// </summary>
+        /// <param name="assetName">资源名字</param>
+        /// <param name="loadResourceAgentHelper">资源加载代理辅助器</param>
+        public object LoadAssetSync(string assetName)
+        {
+            if (string.IsNullOrEmpty(assetName))
+            {
+                Log.Error("Asset name is invalid.");
+                return null;
+            }
+#if UNITY_EDITOR
+            UnityEngine.Object asset = AssetDatabase.LoadMainAssetAtPath(assetName);
+            if (asset != null)
+            {
+                return asset;
+            }
+            else
+            {
+                //Log.Warning("Can not load this asset:{0} from asset database.", assetName);
+                return null;
+            }
+#endif
+            return null;
+        }
+
+        /// <summary>
         /// 卸载资源。
         /// </summary>
         /// <param name="asset">要卸载的资源。</param>

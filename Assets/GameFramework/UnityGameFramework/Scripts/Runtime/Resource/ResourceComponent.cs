@@ -681,6 +681,16 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
+        /// 同步加载资源
+        /// </summary>
+        /// <param name="assetName">要加载资源的名称</param>
+        /// <param name="loadResourceAgentHelper">加载资源代理辅助器</param>
+        public object LoadAssetSync(string assetName)
+        {
+            return m_ResourceManager.LoadAssetSync(assetName);
+        }
+
+        /// <summary>
         /// 卸载资源。
         /// </summary>
         /// <param name="asset">要卸载的资源。</param>
